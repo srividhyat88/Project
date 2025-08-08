@@ -6,12 +6,12 @@ pipeline {
     }
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
-        DOCKER_IMAGE = "bkrraj/boardshack:${env.BUILD_NUMBER}" // Image name with versioning
+        DOCKER_IMAGE = "srividhyat88/boardshack:${env.BUILD_NUMBER}" // Image name with versioning
     }
     stages {
         stage('Git Checkout') {
             steps {
-                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/bkrrajmali/BoardGame.git'
+                git branch: 'main', credentialsId: 'git-cred', url: 'https://github.com/srividhyat88/Project.git'
             }
         }
         stage('Versioning') {
