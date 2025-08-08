@@ -105,7 +105,7 @@ pipeline {
         }
     stage('Deploy To Kubernetes') {
 steps {
-withKubeConfig(caCertificate: '', clusterName: 'my-cluster', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://5A01BC8FADC3B1F2978C9BD0D1768FBF.gr7.us-east-1.eks.amazonaws.com') {
+withKubeConfig(caCertificate: '', clusterName: 'my-cluster', contextName: '', credentialsId: 'k8-cred', namespace: 'webapps', restrictKubeConfigAccess: false, serverUrl: 'https://0307A6D0191D715785E1754316406260.yl4.ap-south-1.eks.amazonaws.com') {
 sh "kubectl apply -f deployment-service.yaml"
 }
 }
